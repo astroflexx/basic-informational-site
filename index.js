@@ -1,7 +1,7 @@
 import http from "http";
 import fs from "fs/promises";
 
-const port = 8080;
+const port = 3000;
 
 const server = http.createServer((req, res) => {
   const path = req.url;
@@ -34,4 +34,6 @@ const server = http.createServer((req, res) => {
   loadHTML(filename);
 });
 
-server.listen(port);
+server.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
