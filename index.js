@@ -1,7 +1,6 @@
 import http from "http";
 import fs from "fs/promises";
 
-const hostname = "127.0.0.1";
 const port = 8080;
 
 const server = http.createServer((req, res) => {
@@ -35,6 +34,4 @@ const server = http.createServer((req, res) => {
   loadHTML(filename);
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+server.listen(port);
